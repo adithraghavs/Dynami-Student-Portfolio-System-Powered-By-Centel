@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Macaque</title>
+        <link rel="icon" href="favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+    </head>
+
+    <body>
+        <style>
+            body {
+            font-family: "Roboto", sans-serif;
+            font-size: 17px;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .shadow {
+            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #f00000;
+            border-color: #dc281e;
+        }
+        .masthead {
+            background: #000;
+            height: auto;
+            padding-bottom: 15px;
+            box-shadow: 0 16px 48px #000;
+            padding-top: 10px;
+        }
+        .navbar {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar button{
+            background-color: #000;
+        }
+        .navbar button:active{
+            background-color: #444;
+        }
+        .navbar button:hover {
+            background-color: #fc0;
+            width: 200px;
+        }
+        .bc__home-link, .bc__home-link:link, .bc__home-link:visited {
+            background-image: linear-gradient(120deg, #fc0 0%, #fc0 100%);
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 0;
+            background-color: #000;
+            border-bottom: 2px solid #fc0 !important;
+            color: black;
+            background-color: #ffffff00;
+            text-decoration: none;
+            transition: background-size .125s ease-in;
+            text-transform: uppercase;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: 3px;
+            line-height: 1.5;
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+            margin-right: 200px;
+        }
+        .bc__home-link:hover {
+            background-color: #fc0;
+        }
+        #mySearch {
+            width: 200px;
+            font-size: 18px;
+            padding: 11px;
+            border: #000;
+          }
+          
+          /* Style the navigation menu inside the left column */
+          #myMenu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #000;
+            width: 200px
+          }
+          
+          #myMenu li a {
+            padding: 12px;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            background-color: #333;
+          }
+          
+          #myMenu li a:hover {
+            background-color: #333;
+          }
+          .grid-clock{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
+            grid-gap: 1rem;
+            background-color: #000;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 20px;
+          }
+          .grid-clock > div {
+            background: #333;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            color: #fff;
+          }
+            .grid-centel-apps {
+              display: flex;
+              grid-template-columns: repeat(auto-fill, minmax(500px, 0fr));
+              background-color: #000;
+              margin-left: 40px;
+              margin-right: 20px;
+              margin-bottom: 20px;
+            }
+            .grid-centel-apps > div {
+              background: #333;
+              padding: 1.5rem;
+              border-radius: 1rem;
+              color: #fff;
+              margin-right: 20px;
+            }
+    </style>
+    <script>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      }
+    </script>
+<body bgcolor="#000"  onload="startTime()">
+     <!-- Navigation -->
+     <nav class="navbar">
+        <div>
+            <a class="bc__home-link" href="" style="background-color: #000; color:#fff;">Macaque</a>
+
+            <a class="bc__home-link" href="" style="background-color: #000; color:#fff;">Learn</a>
+            <a class="bc__home-link active" href="" style="background-color: #000; color:#fff;">Blog</a>
+            <a class="bc__home-link active" href="" style="background-color: #000; color:#fff;">Library</a>
+
+        </div>
+    </nav>
+    <h1 style="text-align: center; text-transform:uppercase; font-weight: 400; font-size: 15px; letter-spacing: 3px; line-height: 1.5; margin-top: 10px;">Welcome to your todo list!</h1>
+    <div class="grid-clock">
+        <div style="background-image: '../blog/ai_image_how_to_create_a_chatbot_within_an_hour.jpg';"> <h1 style="text-align: center; text-transform:uppercase; font-weight: 400; font-size: 15px; letter-spacing: 3px; line-height: 1.5; margin-top: 10px;">Clock</h1>
+        <div id="txt" style="text-align: center; font-size:xx-large"></div> </div>
+    </div>
+        <ul>
+            {% for todo_item in all_items %}
+            <li>{{ todo_item.content }}
+                <form action="/deleteTodo/{{todo_item.id}}/" style="display: inline-block;" method="POST">{% csrf_token %}
+                    <input type="submit" value="Delete" style="margin-bottom: 25px;"><br>        
+                </form>
+            </li>
+            {% endfor %}
+        </ul><br><br>
+        
+        <br><form action="/addTodo/" style="margin-left: 400px;" method="POST">{% csrf_token %}
+        <input type="text" name="content" style="border-radius: 20%; background-color:#fff">
+        <input type="submit" value="Add" style="background-color: #1e90ff;width:100px; height:100px; margin-left:50px;border-radius:100%">
+        </form><br>
+    </div>
+    </body>
+    <script>
+        document.getElementById('clock').innerHTML = currentTime(); /* calling currentTime() function to initiate the process */
+    </script>
+</html>
+<!-- <ul>
+    <li>temp todo item A</li>
+    <li>temp todo item B</li>
+</ul> -->
